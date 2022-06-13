@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/playagain.unity
     guid: 7ae38b940ca11a24585f2baa1f922116
+  - enabled: 1
+    path: Assets/Scenes/ganaste.unity
+    guid: f186701bd38db62499707aa6136025fc
   m_configObjects: {}

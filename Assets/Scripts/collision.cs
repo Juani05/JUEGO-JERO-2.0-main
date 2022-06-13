@@ -18,14 +18,22 @@ public class collision : MonoBehaviour
 
     }
 
+
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.name == "Auto")
         {
             audioManager.playclip();
-            Destroy(gameObject);
-            SceneManager.LoadScene("playagain");
+            StartCoroutine(esperar());  
         }
 
+    }
+    IEnumerator esperar ()
+    {
+        playermovement temp = GetComponent<playermovement>();
+        temp.movementSpeed = 0;
+        temp.turningSpeed = 0;
+        yield return new WaitForSeconds(.6f);
+        SceneManager.LoadScene("playagain");
     }
 }

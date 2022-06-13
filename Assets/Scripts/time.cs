@@ -24,7 +24,6 @@ public class time : MonoBehaviour
             if (currentTime > 15)
             {
             SceneManager.LoadScene("ganaste");
-            Time.timeScale = 0;
 
         }
         }

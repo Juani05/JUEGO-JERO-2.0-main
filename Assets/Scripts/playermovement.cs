@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 public class playermovement : MonoBehaviour
 {
-    public Vector3 playerSpeed;
+    public float turningSpeed;
     public float movementSpeed;
     public GameObject myobject;
   
     // Start is called before the first frame update
     void Start()
     {
-        myobject.transform.position = playerSpeed;
+        //myobject.transform.position = playerSpeed;
     }
 
     // Update is called once per frame
@@ -22,12 +22,12 @@ public class playermovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.position += new Vector3(movementSpeed, 0, 0);
+            transform.position += new Vector3(movementSpeed, 0, 0) * turningSpeed * Time.deltaTime;
 
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.position -= new Vector3(movementSpeed, 0, 0);
+            transform.position -= new Vector3(movementSpeed, 0, 0)* turningSpeed * Time.deltaTime;
 
         }
     }
