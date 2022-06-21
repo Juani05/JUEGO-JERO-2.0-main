@@ -21,7 +21,7 @@ public class time : MonoBehaviour
         currentTime += Time.deltaTime;
         txt_timeFloored.text = Mathf.Floor(currentTime).ToString();
 
-            if (currentTime > 15)
+            if (currentTime > 19)
             {
             SceneManager.LoadScene("ganaste");
 

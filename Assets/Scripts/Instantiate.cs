@@ -9,7 +9,7 @@ public class Instantiate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        CloneObject();
     }
 
     // Update is called once per frame
